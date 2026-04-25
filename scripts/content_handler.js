@@ -24,28 +24,45 @@ function carregarConteudo(pagina) {
     const conteudos = {
         'home': `
             <div class="content-section">
-                <h1>Projeto Plantando Consciência</h1>
+                <h1>Desenvolvendo ODS em abientes de aprendizagem</h1>
+
+                <p>Este site é um repositório de materiais desenvolvidos durante a realização de atividade extensionista para a conclusão do curso de Análise e Desenvolvimento de Sistemas pelo aluno Lucas de Paula Teixeira.</p>
+                <p>A Atividade extensionista foi desenvolvida pelo aluno para levar conhecimento e práticas sustentáveis, contribuindo para o desenvolvimento social, cultural e ambiental de sua comunidade e de qualquer outra comunidade que possa se beneficiar.</p>
+                <p>Todo material contido neste repositório é de domínio público e pode ser utilizado livremente por qualquer pessoa.</p>
+
+                <h2>Projeto Plantando Consciência</h2>
                 
-                <h2>🌱 A importância da educação ambiental nas escolas</h2>
-                <p>A educação ambiental nas escolas é essencial para formar cidadãos conscientes, saudáveis e comprometidos com o futuro do planeta. Ao integrar práticas sustentáveis e o contato direto com a natureza desde a primeira infância, promovemos não apenas o aprendizado, mas também o bem-estar físico e emocional dos alunos.</p>
+                <h3>🌱 A importância da educação ambiental desde a infância</h3>
+                <p>Integrar práticas sustentáveis na escola é essencial para formar cidadãos conscientes e comprometidos com o futuro. O contato direto com a natureza desde cedo desenvolve empatia, responsabilidade e respeito pela vida, refletindo em atitudes mais sustentáveis na vida adulta.</p>
                 
-                <h2>🌿 Espaços verdes como aliados da aprendizagem e da saúde</h2>
-                <p>Ambientes escolares com áreas verdes estimulam a curiosidade, a criatividade e a concentração. Estudos mostram que crianças que têm acesso regular à natureza apresentam melhor desempenho acadêmico, menos estresse e maior capacidade de resolver problemas. Além disso, o contato com espaços naturais favorece hábitos saudáveis, como atividades físicas ao ar livre e alimentação consciente.</p>
-                
-                <h2>👶 Natureza desde cedo: um investimento no futuro</h2>
-                <p>O vínculo com o meio ambiente deve começar na primeira infância, quando a criança está formando sua visão de mundo. Brincar na terra, observar animais e cuidar de plantas desenvolve empatia, responsabilidade e respeito pela vida. Esses valores, cultivados desde cedo, refletem em atitudes mais sustentáveis na vida adulta.</p>
+                <h3>🌿 Espaços verdes como aliados da aprendizagem e saúde</h3>
+                <p>Ambientes escolares com áreas verdes estimulam a curiosidade e a concentração. Crianças com acesso à natureza apresentam melhor desempenho acadêmico, menos estresse e desenvolvem hábitos saudáveis, como atividades físicas ao ar livre e alimentação consciente.</p>
                 
                 <div class="material-card" style="margin-top: 2rem;">
                     <p style="margin:0; text-align:center; font-weight:600; color: var(--color-primary-dark); font-size: 1.15rem;">
                         Incluir a educação ambiental no currículo escolar é mais do que ensinar sobre reciclagem ou biodiversidade — é criar uma cultura de cuidado, pertencimento e transformação. É preparar nossos alunos para serem protagonistas de um mundo mais justo e equilibrado.
                     </p>
                 </div>
+                <br>
+                <h2>Projeto Caminhos da Igualdade</h2>
+                <h3>🎓 Educação como chave para reduzir desigualdades</h3>
+                <p>Em um país marcado por diferenças profundas, a escola é o espaço onde se pode transformar realidades e construir um futuro mais justo. O acesso à educação de qualidade é essencial para romper ciclos de exclusão e ampliar oportunidades, especialmente para meninas, que enfrentam múltiplas barreiras. Ao valorizar a diversidade e promover a inclusão, a escola se torna um ponto de partida para a redução das desigualdades, permitindo que cada jovem trilhe seu próprio caminho com autonomia e dignidade.</p>
+                <h3>👧 Meninas protagonistas: inclusão e equidade</h3>
+                <p>Meninas da rede pública, muitas vezes, lidam com desafios que vão além da sala de aula: responsabilidades domésticas, falta de acesso à tecnologia e discriminação. Ao apoiar essas jovens, o projeto fortalece não só a igualdade de gênero, mas também combate desigualdades sociais, raciais e econômicas. Incentivar o protagonismo feminino é criar novas possibilidades, ampliar horizontes e inspirar sonhos, mostrando que a escola pode ser um espaço de acolhimento, respeito e transformação.</p>
+                <div class="material-card" style="margin-top: 2rem;">
+                    <p style="margin:0; text-align:center; font-weight:600; color: var(--color-primary-dark); font-size: 1.15rem;">
+                        Caminhos da Igualdade é um convite para fortalecer a educação, com foco na redução das desigualdades e no protagonismo das meninas como agentes de mudança. Cada material inspira a construção de um Brasil mais justo, plural e inclusivo.
+                    </p>
+                </div>
+
+
+
             </div>
         `,
         'material': `
             <div class="content-section">
                 <h1>Material do Projeto</h1>
-                <p style="text-align: center; font-size: 1.15rem; color: var(--color-text); margin-bottom: 2rem;">A seguir estão reunidos os materiais desenvolvidos para a realização do projeto.</p>
+                <p>A seguir estão reunidos os materiais desenvolvidos para a realização do projeto.</p>
                 
                 <div class="material-card" style="text-align: center;">
                     <p>Os arquivos estão disponíveis para download em formato ZIP, contendo os materiais em PDF e PNG, prontos para serem impressos ou utilizados em dispositivos digitais.</p>
@@ -55,7 +72,7 @@ function carregarConteudo(pagina) {
                 <h2>Como usar o material?</h2>
                 <div class="material-card">
                     <p>O material foi desenvolvido para ser utilizado pelo professor como um guia, podendo ser adaptado conforme a necessidade da turma e a realidade da escola.</p>
-                    <p>Ele é composto por duas partes:</p>
+                    <p>Ele é composto pelos seguintes projetos:</p>
                     <ul>
                         <li>♻️ <strong>Projeto de Reciclagem:</strong> Voltado para a conscientização sobre resíduos sólidos.</li>
                         <li>🪴 <strong>Projeto de Horta Comunitária:</strong> Focado no contato direto com o plantio e a terra.</li>
@@ -68,7 +85,7 @@ function carregarConteudo(pagina) {
         'contato': `
             <div class="content-section" style="text-align: center;">
                 <h1>Entre em Contato</h1>
-                <p style="font-size: 1.15rem;">Para mais informações sobre o projeto, tirar dúvidas ou propor parcerias, entre em contato pelos meios abaixo. Será um prazer ajudar!</p>
+                <p>Para mais informações sobre o projeto, tirar dúvidas ou propor parcerias, entre em contato pelos meios abaixo. Será um prazer ajudar!</p>
                 
                 <div class="contatos-list">
                     <a href="https://api.whatsapp.com/send?phone=5522998923719" class="contato-link" target="_blank" rel="noopener noreferrer">

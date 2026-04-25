@@ -191,6 +191,10 @@ ul li {
   padding-right: 1.5rem; /* Dá espaço para a barra não colar no texto */
 }
 
+.content-section p {
+  text-indent: 1em;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -225,6 +229,10 @@ ul li {
   border-radius: 12px;
   border-left: 5px solid var(--color-primary);
   margin-bottom: 1.5rem;
+}
+
+.material-card p {
+  text-indent: 0;
 }
 
 /* Contact Section */
