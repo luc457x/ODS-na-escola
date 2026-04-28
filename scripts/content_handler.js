@@ -26,9 +26,9 @@ function carregarConteudo(pagina) {
             <div class="content-section">
                 <h1>Desenvolvendo ODS em abientes de aprendizagem</h1>
 
-                <p>Este site é um repositório de materiais desenvolvidos durante a realização de atividade extensionista para a conclusão do curso de Análise e Desenvolvimento de Sistemas pelo aluno Lucas de Paula Teixeira.</p>
+                <p>Esta página é um repositório de materiais desenvolvidos durante a realização de atividade extensionista para a conclusão do curso de Análise e Desenvolvimento de Sistemas pelo aluno Lucas de Paula Teixeira.</p>
                 <p>A Atividade extensionista foi desenvolvida pelo aluno para levar conhecimento e práticas sustentáveis, contribuindo para o desenvolvimento social, cultural e ambiental de sua comunidade e de qualquer outra comunidade que possa se beneficiar.</p>
-                <p>Todo material contido neste repositório é de domínio público e pode ser utilizado livremente por qualquer pessoa.</p>
+                <p>Todo material contido nesta página é de domínio público e pode ser utilizado livremente por qualquer pessoa.</p>
 
                 <h2>Projeto Plantando Consciência</h2>
                 
