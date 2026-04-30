@@ -62,7 +62,7 @@ function carregarConteudo(pagina) {
                 
                 <div class="material-card" style="text-align: center;">
                     <p>Os arquivos estão disponíveis para download em formato ZIP, contendo os materiais em PDF e PNG, prontos para serem impressos ou utilizados em dispositivos digitais.</p>
-                    <a href="./docs/projeto_plantando_consciencia.zip" class="material-download-btn" download>📥 Baixar Pacote de Arquivos (ZIP)</a>
+                    <a href="./docs/desenvolvendo_sustentabilidade_em_espacos_de_aprendizagem.zip" class="material-download-btn" download>📥 Baixar Pacote de Arquivos (ZIP)</a>
                 </div>
                 
                 <h2>Como usar o material?</h2>
@@ -70,11 +70,9 @@ function carregarConteudo(pagina) {
                     <p>O material foi desenvolvido para ser utilizado por agentes mobilizadores da comunidade como um guia para o desenvolvimento de atividades, podendo ser adaptado conforme a necessidade e a realidade de cada comunidade.</p>
                     <p>Ele é composto pelos seguintes projetos:</p>
                     <ul>
-                        <li>♻️ <strong>Projeto de Reciclagem:</strong> Voltado para a conscientização sobre resíduos sólidos.</li>
-                        <li>🪴 <strong>Projeto de Horta Comunitária:</strong> Focado no contato direto com o plantio e a terra.</li>
-                    </ul>
-                    <p>Cada projeto está subdividido em duas partes para melhor adaptação à idade dos alunos do Ensino Fundamental (anos iniciais e anos finais).</p>
-                    <p>Além do material desenvolvido por nós, o pacote inclui dois manuais da Embrapa para auxiliar tecnicamente no desenvolvimento do projeto da horta comunitária.</p>
+                        <li>♻️🪴 <strong>Projeto Plantando Consciência:</strong> Subdividido em duas partes: uma voltada para a conscientização sobre resíduos sólidos e outra no contato direto com o plantio e a terra. Cada projeto está novamente subdividido em duas partes para melhor adaptação à idade dos alunos do Ensino Fundamental (anos iniciais e anos finais).<br> O projeto também inclui dois manuais da Embrapa para auxiliar tecnicamente no desenvolvimento do projeto da horta comunitária.</li>
+                        <li>👨🏻‍💻👩🏾‍🔬 <strong>Projeto Caminhos da Igualdade:</strong> Apresenta a Educação digital como um caminho para se reduzir desigualdades e propõe possibilidades de se introduzir o tema em espaços de aprendizagem. Além disso o material inclui uma apresentação de slides sobre o empoderamento feminino através da educação digital e tecnologia.</li>
+                        </ul>
                 </div>
             </div>
         `,
