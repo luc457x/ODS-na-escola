@@ -1,8 +1,8 @@
-# Desenvolvendo ODS em ambientes de aprendizagem
+# Desenvolvendo sustentabilidade em ambientes de aprendizagem
 
-Esta página é um repositório de materiais desenvolvidos durante a realização de atividade extensionista para a conclusão do curso de Análise e Desenvolvimento de Sistemas pelo aluno Lucas de Paula Teixeira.
+Esta página é um repositório de materiais desenvolvidos durante a realização de atividade extensionista para a conclusão do curso de graduação em Análise e Desenvolvimento de Sistemas da UFBRA pelo aluno Lucas de Paula Teixeira.
 
-A Atividade extensionista foi desenvolvida pelo aluno para levar conhecimento e práticas sustentáveis, contribuindo para o desenvolvimento social, cultural e ambiental de sua comunidade e de qualquer outra comunidade que possa se beneficiar.
+A Atividade extensionista foi desenvolvida pelo aluno para levar conhecimento e práticas sustentáveis, contribuindo para o desenvolvimento social, cultural e ambiental de sua comunidade e de qualquer outra comunidade que possa se beneficiar dela.
 
 Todo material contido nesta página é de domínio público e pode ser utilizado livremente por qualquer pessoa.
 
@@ -18,10 +18,10 @@ Ambientes escolares com áreas verdes estimulam a curiosidade e a concentração
 
 ## Projeto Caminhos da Igualdade
 
-### 🎓 Educação como chave para reduzir desigualdades
-Em um país marcado por diferenças profundas, a escola é o espaço onde se pode transformar realidades e construir um futuro mais justo. O acesso à educação de qualidade é essencial para romper ciclos de exclusão e ampliar oportunidades, especialmente para meninas, que enfrentam múltiplas barreiras. Ao valorizar a diversidade e promover a inclusão, a escola se torna um ponto de partida para a redução das desigualdades, permitindo que cada jovem trilhe seu próprio caminho com autonomia e dignidade.
+### 🎓 Educação digital como chave para reduzir desigualdades
+Em um país marcado por diferenças profundas, a escola é o espaço onde se pode transformar realidades e construir um futuro mais justo. O acesso à educação digital é essencial para romper ciclos de exclusão e ampliar oportunidades, especialmente para meninas, que enfrentam múltiplas barreiras. Ao valorizar a diversidade e promover a inclusão digital, a escola se torna um ponto de partida para a redução das desigualdades, permitindo que cada jovem trilhe seu próprio caminho com autonomia e dignidade.
 
 ### 👧 Meninas protagonistas: inclusão e equidade
 Meninas da rede pública, muitas vezes, lidam com desafios que vão além da sala de aula: responsabilidades domésticas, falta de acesso à tecnologia e discriminação. Ao apoiar essas jovens, o projeto fortalece não só a igualdade de gênero, mas também combate desigualdades sociais, raciais e econômicas. Incentivar o protagonismo feminino é criar novas possibilidades, ampliar horizontes e inspirar sonhos, mostrando que a escola pode ser um espaço de acolhimento, respeito e transformação.
 
-> **Caminhos da Igualdade é um convite para fortalecer a educação, com foco na redução das desigualdades e no protagonismo das meninas como agentes de mudança. Cada material inspira a construção de um Brasil mais justo, plural e inclusivo.**
+> **Caminhos da Igualdade é um convite para fortalecer a educação digital, com foco na redução das desigualdades e no protagonismo das meninas como agentes de mudança da própria história. O material inspira a construção de um Brasil mais justo, plural e inclusivo.**

@@ -1,6 +1,6 @@
 # Diretrizes para IA (AGENTS.md)
 
-Este documento define as regras e o contexto arquitetural do projeto **Desenvolvendo ODS em abientes de aprendizagem** para guiar Agentes de IA e assistentes de programação.
+Este documento define as regras e o contexto arquitetural do projeto **Desenvolvendo sustentabilidade em ambientes de aprendizagem** para guiar Agentes de IA e assistentes de programação.
 
 ## 📌 Contexto do Projeto
 
@@ -18,6 +18,9 @@ O projeto não utiliza nenhum build system ou framework (sem React, Vue, NPM, et
 - `index.html`: Contém apenas o esqueleto principal (Header, Nav, Footer e um `<main id="conteudo">` vazio).
 - `css/styles.css`: Arquivo principal de estilos, contém as variáveis CSS (`:root`) e todo o design system.
 - `scripts/content_handler.js`: O coração da aplicação. Todo o texto e estrutura das "páginas" (Home, Material, Contato) são injetados dinamicamente via JS através de Template Literals dentro deste arquivo.
+- `docs/`: Contém os materiais desenvolvidos para o projeto.
+- `img/`: Contém as imagens utilizadas no site.
+- `scripts/`: Contém os scripts utilizados no site.
 
 ## ⚖️ Regras de Desenvolvimento
 
