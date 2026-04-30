@@ -107,5 +107,5 @@ function carregarConteudo(pagina) {
     setTimeout(() => {
         conteudoDiv.innerHTML = conteudos[pagina] || '<div class="content-section"><h2 style="text-align:center;">Página não encontrada</h2></div>';
         conteudoDiv.style.opacity = '1';
-    }, 200); // tempo para o fade-out rápido
+    }, 450); // tempo para o fade-out suave
 }

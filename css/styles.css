@@ -185,7 +185,7 @@ ul li {
 
 /* Page Specific Styles injected via JS */
 .content-section {
-  animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 1s ease-in;
   flex: 1;
   overflow-y: auto; /* O scroll agora acontece aqui dentro */
   padding-right: 1.5rem; /* Dá espaço para a barra não colar no texto */
