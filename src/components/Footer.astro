@@ -1,0 +1,13 @@
+---
+interface Props {
+  year?: number;
+}
+
+const { year = 2025 } = Astro.props;
+---
+
+<footer class="footer">
+  <p>
+    <span style="display:inline-block; transform: scaleX(-1);">&copy;</span> {year} - <a href="https://lucas7x.win" target="_blank" rel="noopener noreferrer">lucas7x</a>
+  </p>
+</footer>

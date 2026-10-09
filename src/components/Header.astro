@@ -1,0 +1,30 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+
+// Normalize path (handle trailing slashes)
+const normalizedPath = currentPath === '/' ? '/' : currentPath.replace(/\/$/, '');
+
+const navItems = [
+  { href: '/', label: 'Home', active: normalizedPath === '' || normalizedPath === '/' },
+  { href: '/material', label: 'Material', active: normalizedPath === '/material' },
+  { href: '/sobre', label: 'Sobre', active: normalizedPath === '/sobre' },
+];
+---
+
+<header class="header">
+  <nav class="nav-container" aria-label="Navegação Principal">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class={`nav-btn ${item.active ? 'active' : ''}`}
+        aria-current={item.active ? 'page' : undefined}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</header>

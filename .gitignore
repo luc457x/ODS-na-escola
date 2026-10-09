@@ -31,3 +31,6 @@ dist/
 # General log files
 *.log
 
+# Heavy binaries (distribution via GitHub Releases)
+*.zip
+
