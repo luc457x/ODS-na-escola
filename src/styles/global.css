@@ -31,6 +31,9 @@ html {
   scroll-behavior: smooth;
   min-height: 100%;
   overflow-y: auto;
+  overflow-y: overlay;
+  scrollbar-color: rgba(46, 139, 87, 0.7) rgba(255, 255, 255, 0.15);
+  scrollbar-width: thin;
   background-color: #e8f5e9;
   background-image: url("/img/bg-w.webp");
   background-size: cover;
@@ -48,22 +51,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Overlay Scrollbar */
+/* Custom Translucent Overlay Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(46, 139, 87, 0.7);
   border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(46, 139, 87, 0.9);
+  background-clip: padding-box;
 }
 
 /* Header & Sticky Navigation */
