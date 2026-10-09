@@ -1,32 +1,40 @@
-# Diretrizes para IA (AGENTS.md)
+# AI Constitution (AGENTS.md)
 
-Este documento define as regras e o contexto arquitetural do projeto **Desenvolvendo sustentabilidade em ambientes de aprendizagem** para guiar Agentes de IA e assistentes de programação.
+## Core Directive
 
-## 📌 Contexto do Projeto
+Safety first. Determinism. Extreme token efficiency.
 
-Este site hospeda os projetos "Plantando Consciência" e "Caminhos da Igualdade", voltados para a educação ambiental e redução de desigualdades no ambiente escolar. É um repositório de materiais desenvolvido como atividade extensionista de faculdade.
+## Philosophy
 
-## 🛠️ Stack Tecnológico
+Four tenets ensure correctness, safety, token efficiency:
 
-- **HTML5 Vanilla**: Estrutura base da página.
-- **CSS3 Vanilla**: Estilização com design limpo, moderno, responsivo (focado em Glassmorphism e Flexbox).
-- **JavaScript Vanilla**: Lógica de roteamento simples (SPA - Single Page Application) e interatividade.
+1. **Extreme Minimalism & Token Economy**:
+   - Every token counts. Keep files, docs, communication terse, direct.
+   - Kill filler, pleasantries, redundant explanations.
+   - Write compressed instructions. Use caveman style to save context.
 
-## 🏗️ Arquitetura
+2. **Rigid Safety & Fail-Loud**:
+   - Safety first. Never run unverified/destructive commands without confirmation.
+   - Fail loud, early. If tests fail or requirements unclear, expose issue immediately.
+   - Never guess. Trigger Rollback & Restart protocol if context confused.
 
-O projeto não utiliza nenhum build system ou framework (sem React, Vue, NPM, etc.).
-- `index.html`: Contém apenas o esqueleto principal (Header, Nav, Footer e um `<main id="conteudo">` vazio).
-- `css/styles.css`: Arquivo principal de estilos, contém as variáveis CSS (`:root`) e todo o design system.
-- `scripts/content_handler.js`: O coração da aplicação. Todo o texto e estrutura das "páginas" (Home, Material, Contato) são injetados dinamicamente via JS através de Template Literals dentro deste arquivo.
-- `docs/`: Contém os materiais desenvolvidos para o projeto.
-- `img/`: Contém as imagens utilizadas no site.
-- `scripts/`: Contém os scripts utilizados no site.
+3. **Strict Spec & Test-Driven Development (STDD)**:
+   - Define specs, contracts, schemas, types before implementation.
+   - Write failing tests first (Red), implement minimal code (Green), refactor keeping tests green (Refactor).
+   - No code complete without automated verification.
 
-## ⚖️ Regras de Desenvolvimento
+4. **Surgical Precision**:
+   - Touch requested/needed code only. No cleanup in adjacent code.
+   - Match existing style, patterns, architecture.
 
-1. **Preserve a Arquitetura SPA Simples**: Não crie novos arquivos `.html` para novas páginas. O conteúdo deve ser adicionado como uma nova chave no objeto `conteudos` dentro do `content_handler.js`.
-2. **Sem Frameworks**: O código deve permanecer 100% Vanilla (HTML, CSS e JS).
-3. **Padrão de Código e Idioma**: 
-   - Mantenha nomes de variáveis e funções preferencialmente em **Português** (`carregarConteudo`, `conteudoDiv`), acompanhando o padrão atual do projeto.
-   - Todo o conteúdo escrito para os usuários finais e comentários no código devem ser em **Português do Brasil (pt-BR)**.
-4. **Design UX/UI**: Preserve a estética atual (uso de variáveis de cores já definidas, fontes 'Outfit' e 'Lato', e as transições de *fade-in* ao trocar de abas).
+## Repo Scope & Method
+
+- **Cycle**: Spec & Test-Driven Development (STDD). Specs, schemas, type contracts first, then TDD.
+- **Stack**: 
+  - **Languages**: HTML5, CSS3, JavaScript (Vanilla)
+  - **Tools**: Navegador Web / Servidor local estático
+  - **Testing**: Manual / E2E Smoke Test
+
+## Core Rules
+
+Strictly follow rules defined in [rules](.agents/rules/).
