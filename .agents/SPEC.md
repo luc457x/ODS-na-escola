@@ -2,33 +2,33 @@
 
 ## 1. Overview & Goals
 
-Desenvolvimento do site do projeto **Desenvolvendo sustentabilidade em ambientes de aprendizagem**, hospedando as iniciativas "Plantando Consciência" e "Caminhos da Igualdade" voltadas para a educação ambiental e redução de desigualdades no ambiente escolar. Repositório de materiais desenvolvido como atividade extensionista universitária.
+Web portal for project **Desenvolvendo sustentabilidade em ambientes de aprendizagem**, hosting initiatives "Plantando Consciência" and "Caminhos da Igualdade" focused on environmental education and inequality reduction in school environments. Static educational resource repository built as university extension activity.
 
 ## 2. Scope
 
-Repositório web estático (SPA) para apresentação dos projetos, disponibilização e download de materiais didáticos e documentos extensionistas, e canal de contato.
+Static SPA web repository presenting projects, distributing educational materials and extension documents for download, and providing contact channel.
 
 ## 3. Tech Stack
 
-- **HTML5 Vanilla**: Estrutura base da página (`index.html`).
-- **CSS3 Vanilla**: Estilização com Glassmorphism, Flexbox, variáveis de design system (`css/styles.css`), fontes 'Outfit' e 'Lato'.
-- **JavaScript Vanilla**: SPA routing simples e injeção dinâmica de conteúdo via `scripts/content_handler.js`. Sem build systems ou frameworks.
+- **HTML5 Vanilla**: Base document structure (`index.html`).
+- **CSS3 Vanilla**: Styling via Glassmorphism, Flexbox, design tokens in `css/styles.css`, fonts 'Outfit' and 'Lato'.
+- **JavaScript Vanilla**: Single Page Application routing and dynamic content injection via `scripts/content_handler.js`. No frameworks or build tooling.
 
 ## 4. Functional Requirements (FR)
 
-- **FR1 (Shell Principal)**: O arquivo `index.html` fornece o esqueleto principal com Header, Nav, Footer e `<main id="conteudo">`.
-- **FR2 (Injeção de Conteúdo)**: As seções ("home", "material", "contato") são injetadas dinamicamente no elemento `<main id="conteudo">` a partir do objeto `conteudos` via template literals em `scripts/content_handler.js`.
-- **FR3 (Navegação SPA)**: Alternância de abas ativa a navegação, atualiza a classe `active` nos links e dispara animação de transição.
+- **FR1 (App Shell)**: File `index.html` defines persistent skeleton (Header, Nav, Footer, and `<main id="conteudo">`).
+- **FR2 (Content Injection)**: Sections ("home", "material", "contato") injected dynamically into container `<main id="conteudo">` from object `conteudos` using template literals in `scripts/content_handler.js`.
+- **FR3 (SPA Navigation)**: Tab switching updates `active` classes on navigation links and triggers fade-in transitions.
 
 ## 5. Business Rules (BR)
 
-- **BR1 (Vanilla Absoluto)**: Manter código 100% Vanilla (HTML, CSS e JS). Sem frameworks (React, Vue, etc.) e sem build systems (npm, Vite, webpack).
-- **BR2 (Integridade SPA)**: Não criar novos arquivos `.html` para novas páginas. Todo novo conteúdo deve ser adicionado como chave no objeto `conteudos` dentro de `scripts/content_handler.js`.
-- **BR3 (Padrão de Nomenclatura e Idioma)**: Variáveis e funções preferencialmente em Português (`carregarConteudo`, `conteudoDiv`). Textos de interface e comentários no código estritamente em Português do Brasil (pt-BR).
+- **BR1 (Strict Vanilla)**: Maintain 100% Vanilla code (HTML, CSS, JS). No frameworks (React, Vue, etc.) and no build tools (npm, bundlers).
+- **BR2 (SPA Integrity)**: Do not create separate `.html` files for new pages. All page content must be added as keys within object `conteudos` inside `scripts/content_handler.js`.
+- **BR3 (Naming & Language Conventions)**: Prefer Portuguese for code identifiers matching existing codebase (`carregarConteudo`, `conteudoDiv`). User-facing UI content and code comments must remain in Brazilian Portuguese (pt-BR).
 
 ## 6. Non-Functional Requirements (NFR)
 
-- **NFR1 (Design UX/UI)**: Manter design limpo, moderno e responsivo, preservando a paleta de cores (`:root`), fontes 'Outfit' e 'Lato' e efeitos de Glassmorphism.
-- **NFR2 (Transições Suaves)**: Preservar as transições de *fade-in* ao alternar entre abas de conteúdo.
-- **NFR3 (Acessibilidade e Semântica)**: Estrutura HTML5 semântica e responsiva para diferentes dispositivos.
+- **NFR1 (Design & UX)**: Preserve modern aesthetic using Glassmorphism, CSS variable color palette (`:root`), and 'Outfit'/'Lato' typography.
+- **NFR2 (Transitions)**: Preserve smooth fade-in transitions when switching content tabs.
+- **NFR3 (Accessibility & Semantics)**: Semantic HTML5 structure with responsive layout across mobile and desktop.
 

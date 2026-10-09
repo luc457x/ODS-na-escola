@@ -32,7 +32,7 @@ Four tenets ensure correctness, safety, token efficiency:
 - **Cycle**: Spec & Test-Driven Development (STDD). Specs, schemas, type contracts first, then TDD.
 - **Stack**: 
   - **Languages**: HTML5, CSS3, JavaScript (Vanilla)
-  - **Tools**: Navegador Web / Servidor local estático
+  - **Tools**: Web Browser / Local Static Server
   - **Testing**: Manual / E2E Smoke Test
 
 ## Core Rules

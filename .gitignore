@@ -1,11 +1,11 @@
-# Arquivos de Inteligência Artificial e Diretrizes
+# AI Agent guidelines and documentation
 # AGENTS.md
 # .agentignore
 # .agents/
 GEMINI.md
 CLAUDE.md
 
-# Arquivos gerados pelo Sistema Operacional (Windows/Mac)
+# Operating System files (Windows / macOS)
 .DS_Store
 .DS_Store?
 ._*
@@ -17,11 +17,12 @@ ehthumbs_vista.db
 Thumbs.db
 Desktop.ini
 
-# Diretórios e arquivos de configuração de Editores / IDEs
+# Editor / IDE configuration files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Arquivos de log gerais
+# General log files
 *.log
+
