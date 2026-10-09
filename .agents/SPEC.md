@@ -6,29 +6,32 @@ Web portal for project **Desenvolvendo sustentabilidade em ambientes de aprendiz
 
 ## 2. Scope
 
-Static SPA web repository presenting projects, distributing educational materials and extension documents for download, and providing contact channel.
+Multi-page static website presenting projects, distributing educational materials and extension documents for download, and providing a direct contact channel.
 
 ## 3. Tech Stack
 
-- **HTML5 Vanilla**: Base document structure (`index.html`).
-- **CSS3 Vanilla**: Styling via Glassmorphism, Flexbox, design tokens in `css/styles.css`, fonts 'Outfit' and 'Lato'.
-- **JavaScript Vanilla**: Single Page Application routing and dynamic content injection via `scripts/content_handler.js`. No frameworks or build tooling.
+- **Framework**: Astro (SSG - Static Site Generation, zero client-side JavaScript by default).
+- **Language**: TypeScript (`.ts` / `.astro` scripts).
+- **Styling**: CSS3 Vanilla (Glassmorphism design tokens, Flexbox, fonts 'Outfit' and 'Lato').
+- **Runtime / Package Manager**: Node.js v24+, npm.
 
 ## 4. Functional Requirements (FR)
 
-- **FR1 (App Shell)**: File `index.html` defines persistent skeleton (Header, Nav, Footer, and `<main id="conteudo">`).
-- **FR2 (Content Injection)**: Sections ("home", "material", "contato") injected dynamically into container `<main id="conteudo">` from object `conteudos` using template literals in `scripts/content_handler.js`.
-- **FR3 (SPA Navigation)**: Tab switching updates `active` classes on navigation links and triggers fade-in transitions.
+- **FR1 (Layout & Navigation Shell)**: Shared layout component (`src/layouts/Layout.astro`) providing persistent Header, sticky navigation bar, and Footer.
+- **FR2 (Multi-Page Static Routes)**: Distinct static pages for `/` (Home), `/material` (Materials download & guide), and `/sobre` (About & Contact). Fully pre-rendered at build time.
+- **FR3 (Active Route Indication)**: Navigation buttons highlight current active page based on current URL pathname.
+- **FR4 (Resource Distribution)**: Material page provides verified links/downloads for extension project packages.
 
 ## 5. Business Rules (BR)
 
-- **BR1 (Strict Vanilla)**: Maintain 100% Vanilla code (HTML, CSS, JS). No frameworks (React, Vue, etc.) and no build tools (npm, bundlers).
-- **BR2 (SPA Integrity)**: Do not create separate `.html` files for new pages. All page content must be added as keys within object `conteudos` inside `scripts/content_handler.js`.
-- **BR3 (Naming & Language Conventions)**: Prefer Portuguese for code identifiers matching existing codebase (`carregarConteudo`, `conteudoDiv`). User-facing UI content and code comments must remain in Brazilian Portuguese (pt-BR).
+- **BR1 (Minimal Framework Footprint)**: Use Astro purely as a static compiler. Output zero unnecessary client-side JavaScript (`<script>` only when strictly interactive behavior required).
+- **BR2 (File-Based Structure)**: Pages reside strictly under `src/pages/`. Shared components reside in `src/components/` and layouts in `src/layouts/`.
+- **BR3 (Naming & Content Language)**: User-facing interface text, public documentation, and code comments must remain in Brazilian Portuguese (pt-BR). Engineering specs, commit messages, and harness rules remain in English.
+- **BR4 (Asset Distribution)**: Heavy binaries (>10 MB, e.g., zip archives) must not be tracked directly in Git repository; offloaded to release assets or external storage.
 
 ## 6. Non-Functional Requirements (NFR)
 
-- **NFR1 (Design & UX)**: Preserve modern aesthetic using Glassmorphism, CSS variable color palette (`:root`), and 'Outfit'/'Lato' typography.
-- **NFR2 (Transitions)**: Preserve smooth fade-in transitions when switching content tabs.
-- **NFR3 (Accessibility & Semantics)**: Semantic HTML5 structure with responsive layout across mobile and desktop.
-
+- **NFR1 (Responsive Viewport Flow)**: Unlocked document scroll flow (`overflow-y: auto`) with sticky header. (Fallback model: fixed 100dvh modal recorded in [ADR 0002](./docs/ADRs/0002-layout-and-viewport-scrolling-model.md)).
+- **NFR2 (Asset Weight & Performance)**: Background and raster images optimized as WebP/AVIF (<150 KB each) to guarantee high Core Web Vitals and low mobile data consumption.
+- **NFR3 (Accessibility & Semantics)**: Valid semantic HTML5 headings (`h1` -> `h2` -> `h3`), ARIA landmarks, WCAG-compliant color contrast ratios.
+- **NFR4 (SEO Indexability)**: Pre-rendered static HTML with proper meta tags (`title`, `description`, OpenGraph) per route.

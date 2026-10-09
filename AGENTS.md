@@ -31,9 +31,9 @@ Four tenets ensure correctness, safety, token efficiency:
 
 - **Cycle**: Spec & Test-Driven Development (STDD). Specs, schemas, type contracts first, then TDD.
 - **Stack**: 
-  - **Languages**: HTML5, CSS3, JavaScript (Vanilla)
-  - **Tools**: Web Browser / Local Static Server
-  - **Testing**: Manual / E2E Smoke Test
+  - **Framework & Languages**: Astro (SSG), TypeScript, HTML5, CSS3
+  - **Tools**: Node.js / npm, Astro CLI, Web Browser
+  - **Testing**: E2E Smoke Test / Build Validation
 
 ## Core Rules
 

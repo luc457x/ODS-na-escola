@@ -23,6 +23,11 @@ Desktop.ini
 *.swp
 *.swo
 
+# Node & Astro build output
+node_modules/
+dist/
+.astro/
+
 # General log files
 *.log
 
