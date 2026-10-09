@@ -23,17 +23,14 @@
   --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Base Styles (Option 1: Unlocked Document Flow) */
+/* Base Styles (Option 2: Fixed Viewport Container with Unlocked Body Scroll) */
 html {
   font-family: var(--font-body);
   color: var(--color-text);
   font-size: 16px;
   scroll-behavior: smooth;
-  min-height: 100%;
-  overflow-y: auto;
-  overflow-y: overlay;
-  scrollbar-color: rgba(46, 139, 87, 0.7) rgba(255, 255, 255, 0.15);
-  scrollbar-width: thin;
+  height: 100%;
+  overflow: hidden;
   background-color: #e8f5e9;
   background-image: url("/img/bg-w.webp");
   background-size: cover;
@@ -42,41 +39,60 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background: transparent;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Translucent Overlay Scrollbar */
-::-webkit-scrollbar {
+/* Scroll Container Scoped to Body */
+.scroll-container {
+  margin-top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  overflow-y: auto;
+  overflow-y: overlay;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  scrollbar-color: rgba(46, 139, 87, 0.7) rgba(255, 255, 255, 0.15);
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Translucent Overlay Scrollbar (Scoped to .scroll-container only) */
+.scroll-container::-webkit-scrollbar {
   width: 10px;
   height: 10px;
   background: transparent;
 }
 
-::-webkit-scrollbar-track {
+.scroll-container::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.15);
+  margin-bottom: var(--footer-height);
 }
 
-::-webkit-scrollbar-thumb {
+.scroll-container::-webkit-scrollbar-thumb {
   background: rgba(46, 139, 87, 0.7);
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.scroll-container::-webkit-scrollbar-thumb:hover {
   background: rgba(46, 139, 87, 0.9);
   background-clip: padding-box;
 }
 
 /* Header & Sticky Navigation */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -125,7 +141,7 @@ body {
 .container {
   flex: 1 0 auto;
   margin-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: calc(var(--footer-height) + 2rem);
   width: 90%;
   max-width: 1000px;
   margin-left: auto;
@@ -316,10 +332,11 @@ ul li {
   font-size: 2rem;
 }
 
-/* Footer (Option 1: Natural Document Flow) */
+/* Footer (Hidden initially, slides in when body scroll reaches end) */
 .footer {
-  flex-shrink: 0;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   min-height: var(--footer-height);
   padding: 0.6rem 1rem;
@@ -328,8 +345,19 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
   font-family: var(--font-heading);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.footer.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .footer a {
@@ -365,7 +393,7 @@ ul li {
 
   .container {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: calc(var(--footer-height) + 1.5rem);
     padding: 2rem 1.25rem;
     width: 95%;
   }

@@ -44,9 +44,33 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://luc457x.
   </head>
   <body>
     <Header />
-    <main class="container" id="conteudo">
-      <slot />
-    </main>
+    <div class="scroll-container" id="scroll-wrapper">
+      <main class="container" id="conteudo">
+        <slot />
+      </main>
+    </div>
     <Footer />
+    <script>
+      const scrollWrapper = document.getElementById('scroll-wrapper');
+      const footer = document.querySelector('.footer');
+
+      if (scrollWrapper && footer) {
+        const checkScroll = () => {
+          // Reveal footer when within 30px of scroll end or if content fits without scrolling
+          const isAtBottom =
+            scrollWrapper.scrollHeight - scrollWrapper.scrollTop - scrollWrapper.clientHeight <= 30;
+          if (isAtBottom) {
+            footer.classList.add('visible');
+          } else {
+            footer.classList.remove('visible');
+          }
+        };
+
+        scrollWrapper.addEventListener('scroll', checkScroll, { passive: true });
+        window.addEventListener('resize', checkScroll, { passive: true });
+        // Initial check once rendered
+        checkScroll();
+      }
+    </script>
   </body>
 </html>
