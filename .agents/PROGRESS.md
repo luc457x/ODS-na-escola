@@ -2,10 +2,34 @@
 
 ## Status
 
-- State: Refactor Planned & Harness Specced
-- Last: Captured design decisions, updated SPEC.md, authored ADRs 0001 & 0002, drafted refactor-plan.md.
+- State: Migration Complete & Verified
+- Last: Completed all 5 phases of refactor-plan.md; built static Astro site with TypeScript and WebP assets.
 
 ## Log
+
+Old sessions: [PROGRESS_ARCHIVE.md](./PROGRESS_ARCHIVE.md).
+
+### Session 02: Astro SSG & Multi-Page Migration
+
+- Date: 2026-10-09
+- Agent: Antigravity
+- Goal: Complete refactor plan migrating pseudo-SPA to Astro SSG, TypeScript, and optimized assets.
+- Constraints: Static output, zero client-side JS overhead, relative paths in docs, WebP images <150 KB.
+- Done:
+  - Initialized Astro toolchain with static output (`package.json`, `astro.config.mjs`, `tsconfig.json`).
+  - Created design tokens and Option 1 unlocked document flow in `src/styles/global.css`.
+  - Built semantic shell components: `src/layouts/Layout.astro`, `src/components/Header.astro`, `src/components/Footer.astro`.
+  - Migrated routes: `src/pages/index.astro`, `src/pages/material.astro`, `src/pages/sobre.astro`.
+  - Fixed accessibility & heading hierarchy: replaced nested `<a><h2>` with semantic `<span class="contato-text">`.
+  - Compressed background images to WebP: `bg-w.webp` (139 KB), `bg.webp` (108 KB) in `public/img/`.
+  - Untracked 36.7 MB binary zip from git index and ignored `*.zip` in `.gitignore`.
+  - Safely archived legacy vanilla implementation to `legacy/`.
+  - Verified static build and E2E smoke tests across all routes.
+- Blocked: None.
+- Risk: None. Static pre-rendered HTML with zero runtime JS dependencies.
+- Artifact: `src/`, `public/img/`, `astro.config.mjs`, `package.json`, `.agents/plans/refactor-plan.md`.
+- Verification: `npx astro check` (0 errors, 0 warnings), `npx astro build` (3 routes pre-rendered in 1.1s), python smoke test script passed.
+- Pending: None.
 
 ### Session 01 - 2026-10-09
 - **Harness & Spec Alignment**:
@@ -19,5 +43,3 @@
   - Authored [ADR 0002](./docs/ADRs/0002-layout-and-viewport-scrolling-model.md): Option 1 standard document flow accepted; Option 2 (100dvh modal) preserved as fallback.
 - **Execution Planning**:
   - Formulated 5-phase refactor roadmap in [plans/refactor-plan.md](./plans/refactor-plan.md).
-
-Old sessions: [PROGRESS_ARCHIVE.md](./PROGRESS_ARCHIVE.md).
