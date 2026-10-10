@@ -2,12 +2,30 @@
 
 ## Status
 
-- State: Migration Complete & Verified
-- Last: Completed all 5 phases of refactor-plan.md; built static Astro site with TypeScript and WebP assets.
+- State: Complete, Layout Refined & Playwright Ready
+- Last: Scoped body scrollbar, added footer reveal, uploaded GitHub release, and installed playwright-cli skill.
 
 ## Log
 
 Old sessions: [PROGRESS_ARCHIVE.md](./PROGRESS_ARCHIVE.md).
+
+### Session 03: Layout Refinements and Playwright Skill Setup
+
+- Date: 2026-10-09
+- Agent: Antigravity
+- Goal: Refine scroll layout with scoped body scroll and footer reveal, release asset on GitHub, and install Playwright CLI skill.
+- Constraints: Maintain responsiveness, no scrollbar on header/footer, verified browser automation.
+- Done:
+  - Created and uploaded GitHub release `v1.0.0` with 36.7 MB asset archive; verified download URL returns HTTP 200.
+  - Updated scrollbar to translucent overlay track in `src/styles/global.css`.
+  - Refactored layout model in `src/layouts/Layout.astro` and `src/styles/global.css`: header fixed without scrollbar, scroll scoped to body container, footer reveals dynamically on scroll end.
+  - Installed Playwright CLI agent skill into `.agents/skills/playwright-cli/` and added `.playwright-cli/` to `.gitignore`.
+  - Verified browser automation flow via Playwright CLI: open, snapshot, navigation, screenshot, and clean shutdown.
+- Blocked: None.
+- Risk: None.
+- Artifact: `.agents/skills/playwright-cli/`, `src/styles/global.css`, `src/layouts/Layout.astro`.
+- Verification: `playwright-cli` full flow passed; preview server stopped cleanly.
+- Pending: None.
 
 ### Session 02: Astro SSG & Multi-Page Migration
 
