@@ -34,3 +34,5 @@ dist/
 # Heavy binaries (distribution via GitHub Releases)
 *.zip
 
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
